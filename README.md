@@ -1,50 +1,86 @@
-# Unreal-Engine-Plugin-Version-Manager
-A simple Python utility that helps Unreal Engine plugin developers create compatible versions of their plugins for multiple engine versions (5.0.0 through 5.5.0). Save hours of manual work with this automated tool!
+# Unreal Engine Plugin Version Manager
 
 A simple Python utility that helps Unreal Engine plugin developers create compatible versions of their plugins for multiple engine versions (5.0.0 through 5.5.0). Save hours of manual work with this automated tool!
-Features
 
-Automatically detects .uplugin files in the specified folder
-Creates separate versions for UE 5.0.0 through 5.5.0
-Packages each version into a separate zip file
-Preserves all folder structures and files
-Works with any UE plugin
+---
 
-Requirements
+## ✨ Features
 
-Python 3.6 or higher
-Standard Python libraries (no external dependencies)
+* Automatically detects `.uplugin` files in the specified folder
+* Creates separate plugin versions for UE **5.0.0 through 5.5.0**
+* Packages each version into a separate `.zip` file
+* Preserves all folder structures and plugin content
+* Works with **any** Unreal Engine plugin
 
-Installation
+---
+
+## 📦 Requirements
+
+* Python **3.6+**
+* No external dependencies (uses only standard Python libraries)
+
+---
+
+## 🚀 Installation
+
 Clone this repository or download the script:
-bashgit clone https://github.com/yourusername/ue-plugin-version-manager.git
-Usage
 
-Run the script:
+```bash
+git clone https://github.com/m-ahmed-elbeskeri/ue-plugin-version-manager.git
+```
 
-bashpython ue_plugin_version_manager.py
+---
 
-Enter the path to your plugin folder when prompted, or press Enter to use the default path.
-The script will create zip files named [FolderName]_5_0_0.zip, [FolderName]_5_1_0.zip, etc., each containing a version of your plugin with the appropriate engine version.
+## 🔧 Usage
 
-How It Works
-The script:
+Run the script using Python:
 
-Finds the .uplugin file in your folder
-Creates a temporary copy of your entire plugin folder for each engine version
-Updates the "EngineVersion" field in each .uplugin file
-Packages each modified folder into a separate zip file
-Cleans up temporary folders
-    
-Common Issues
-Unicode Escape Error
-If you encounter a unicode escape error when specifying Windows paths, use one of these solutions:
+```bash
+python ue_plugin_version_manager.py
+```
 
-Use a raw string: r"C:\Path\To\Plugin"
-Use forward slashes: "C:/Path/To/Plugin"
-Double your backslashes: "C:\\Path\\To\\Plugin"
+You'll be prompted to enter the path to your plugin folder. Press Enter to use the default path.
+The script will then create zip files named like:
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+```
+MyPlugin_5_0_0.zip
+MyPlugin_5_1_0.zip
+...
+MyPlugin_5_5_0.zip
+```
+
+Each zip contains a version of your plugin with the correct `EngineVersion` set in the `.uplugin` file.
+
+---
+
+## ⚙️ How It Works
+
+1. Locates the `.uplugin` file in your plugin folder
+2. Creates a temporary copy of the entire plugin for each target engine version
+3. Updates the `EngineVersion` field in each `.uplugin` file
+4. Packages each modified version into its own `.zip` archive
+5. Cleans up all temporary files and folders
+
+---
+
+## 🪯 Common Issues
+
+**Unicode Escape Error on Windows**
+
+If you get a Unicode escape error when entering a Windows path, try one of these:
+
+* Use a raw string: `r"C:\Path\To\Plugin"`
+* Use forward slashes: `"C:/Path/To/Plugin"`
+* Double the backslashes: `"C:\\Path\\To\\Plugin"`
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repo and submit a pull request.
