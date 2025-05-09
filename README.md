@@ -1,5 +1,9 @@
 # Unreal Engine Plugin Version Manager
 
+<p align="left">
+  <a href="https://buymeacoffee.com/m.ahmed.elbesk?new=1"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-yellow?style=flat-square" alt="Buy Me a Coffee"></a>
+</p>
+
 A simple Python utility that helps Unreal Engine plugin developers create compatible versions of their plugins for multiple engine versions (5.0.0 through 5.5.0). Save hours of manual work (or more like minutes but every little counts) with this automated tool!
 
 ---
