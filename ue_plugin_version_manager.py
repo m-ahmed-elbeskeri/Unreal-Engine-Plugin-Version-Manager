@@ -58,8 +58,8 @@ def main():
         uplugin_path = find_uplugin_file(folder_path)
         print(f"Found .uplugin file: {uplugin_path}")
         
-        # Generate versions from 5.0.0 to 5.5.0
-        versions = [f"5.{i}.0" for i in range(6)]
+        # Generate versions from 5.0.0 to 5.6.0
+        versions = [f"5.{i}.0" for i in range(7)]
         
         for version in versions:
             zip_file = create_version_zip(folder_path, uplugin_path, version)
