@@ -11,7 +11,7 @@ A simple Python utility that helps Unreal Engine plugin developers create compat
 ## ✨ Features
 
 * Automatically detects `.uplugin` files in the specified folder
-* Creates separate plugin versions for UE **5.0.0 through 5.5.0**
+* Creates separate plugin versions for UE **5.0.0 through 5.6.0**
 * Packages each version into a separate `.zip` file
 * Preserves all folder structures and plugin content
 * Works with **any** Unreal Engine plugin
